@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    grid-gap: 4rem;
+    height: 100vh;
+    margin-top: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.flex-col {
+    flex-direction: column !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #dad8d8;
+}
+
+table>thead {
+    background-color: #f2f2f2;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+table>tfoot {
+    background-color: #f2f2f2;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+}
+
+table>tbody {
+    background-color: #fcfcfc;
+}
+
+body>main {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 1rem;
+    grid-gap: 4rem;
+}
+
+.website-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+body>footer {
+    background-color: #f5f5f5;
+    padding: 15px 30px;
+    padding-bottom: 2rem;
+    margin-top: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #dad8d8;
+}
+
+body>nav {
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #dad8d8;
+}
+
+.website-box-section {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0.5px solid #dad8d8;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.website-nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.website-nav-link {
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    align-items: center;
+    margin: 0 5px;
+    color: #202124;
+}
+
+.justify-between {
+    justify-content: space-between !important;
+}
+
+.website-banner-text {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0px;
+    color: #202124;
+    text-align: center;
+}
+
+.website-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.website-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.website-contact-form {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.website-input {
+    border-radius: 5px;
+    border: 1px solid #dad8d8;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.website-button {
+    border-radius: 5px;
+    border: 1px solid #dad8d8;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.website-fake-reviews {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+}
+
+.website-fake-reviews-image {
+    width: 100%;
+    height: auto;
+}
+
+.website-banner-paragraph {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0px;
+    color: #202124;
+    text-align: center;
+}

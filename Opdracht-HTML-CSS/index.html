@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Opdracht HTML/CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="taak67/website.css">
+    <link rel="icon" type="image/x-icon" href="https://gijs.eu/favicon.ico">
+</head>
+
+<body>
+    <h1>Opdracht HTML CSS</h1>
+    <div class="grid">
+        <div>
+            <h2>Taak 1 - Tabellen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Voornaam</th>
+                        <th>Achternaam</th>
+                        <th>Leeftijd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gijsbert</td>
+                        <td>van Gemert</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td>Pietje</td>
+                        <td>Klaas</td>
+                        <td>36</td>
+                    </tr>
+                    <tr>
+                        <td>Henk</td>
+                        <td>Tom</td>
+                        <td>19</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Dit is een footer </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div>
+            <h2>Taak 2 - Formulieren</h2>
+            <form class="flex flex-col form-grid" action="mailto:g@gijs.eu" method="POST">
+                <div class="flex">
+                    <label class="form-item" for="firstname">*Voornaam:</label>
+                    <input max="100" class="form-item" type="text" name="firstname" id="firstname"
+                        placeholder="Voornaam" required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="lastname">*Achternaam:</label>
+                    <input max="100" class="form-item" type="text" name="lastname" id="lastname"
+                        placeholder="Achternaam" required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="email">*E-mail:</label>
+                    <input class="form-item" type="email" name="email" id="email" placeholder="E-mail" required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="dateofbirth">*Geboortedatum:</label>
+                    <input class="form-item" type="date" name="dateofbirth" id="dateofbirth" placeholder="Geboortedatum"
+                        required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="address">*Adres:</label>
+                    <input class="form-item" type="text" name="address" id="address" placeholder="Adres" required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="zipcode">*Postcode:</label>
+                    <input max="6" class="form-item" type="text" name="zipcode" id="zipcode" placeholder="Postcode"
+                        required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="city">*Plaats:</label>
+                    <input max="100" class="form-item" type="text" name="city" id="city" placeholder="City" required>
+                </div>
+
+                <div class="flex">
+                    <label class="form-item" for="suggestion">Opmerking:</label>
+                    <input max="400" class="form-item" type="text" name="suggestion" id="suggestion"
+                        placeholder="Opmerking">
+                </div>
+
+                <div class="flex">
+                    <label for="gender">*Geslacht:</label>
+                    <div class="flex ml-auto" style="flex-direction: row;">
+                        <label class="form-item gender-item" for="man">Man:
+                            <input class="form-item" type="radio" name="gender" id="man" checked>
+                        </label>
+                        <label class="form-item gender-item" for="woman">Vrouw:
+                            <input class="form-item" type="radio" name="gender" id="woman">
+                        </label>
+                        <label class="form-item gender-item" for="pirate">Piraat:
+                            <input class="form-item" type="radio" name="gender" id="pirate">
+                        </label>
+                        <label class="form-item gender-item" for="other">Anders:
+                            <input class="form-item" type="radio" name="gender" id="other">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex" style="margin-top: 0.25rem;margin-bottom: 0.25rem;">
+                    <label class="form-item" for="newsletter">Nieuwsbrief:</label>
+                    <input type="checkbox" name="newsletter" id="newsletter">
+                </div>
+
+                <input class="button" type="submit" value="Verstuur!" />
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h2>Taak 5 - The next Google</h2>
+        <div class="google-bg flex flex-col">
+            <nav class="google-nav">
+                <div class="flex">
+                    <a class="google-nav-link">Over</a>
+                    <a class="google-nav-link">Store</a>
+                </div>
+                <div class="flex">
+                    <a class="google-nav-link">Gmail</a>
+                    <a class="google-nav-link">Afbeeldingen</a>
+                    <a class="google-nav-img"><svg focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                            </path>
+                        </svg></a>
+                    <button class="google-nav-button">Inloggen</button>
+                </div>
+            </nav>
+
+            <div class="google-search-box">
+                <img class="google-logo"
+                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                    alt="Google logo">
+                <div class="google-search-bar">
+                    <div>
+                        <input class="google-search-input" type="text" title="Search">
+                        <a href="#"><img class="google-search-icon"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"></a>
+                    </div>
+                </div>
+                <div class="google-search-button-group">
+                    <button class="google-search-button" type="button">Google Search</button>
+                    <button class="google-search-button" type="button">I'm Feeling Lucky</button>
+                </div>
+            </div>
+
+            <footer class="google-footer">
+                <div class="google-footer-1">
+                    Nederland
+                </div>
+                <div class="google-footer-2">
+                    <div>
+                        <a>Adverteren</a>
+                        <a>Bedrijf</a>
+                        <a>Hoe Google zoeken werkt</a>
+                    </div>
+                    <div>
+                        <a><img class="google-footer-img"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
+                                class="Pb9hCb" alt="" data-atf="1" data-frt="0">CO2-neutraal sinds 2007</a>
+                    </div>
+                    <div>
+                        <a>Privacy</a>
+                        <a>Voorwaarden</a>
+                        <a>Instellingen</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div>
+        <a href="/deltion/Opdracht-HTML-CSS/taak67/index.html" target="_blank">
+            <h2>Taak 6 en 7 - Website met naviagtie</h2>
+        </a>
+        <div class="website-box flex flex-col">
+            <iframe src="/deltion/Opdracht-HTML-CSS/taak67/index.html" class="website-iframe"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
