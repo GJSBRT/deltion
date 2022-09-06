@@ -52,7 +52,7 @@ var modal = document.getElementById("modal");
 var restartButton = document.getElementById("restartButton");
 var playerAttack = null;
 var cpuAttack = null;
-var attackButtons = null
+var attackButtons = null;
 
 /* Shows all attack methods */
 waysOfAttack.forEach(function (attack) {
@@ -134,6 +134,10 @@ function restart() {
     /* Hides the modal and restart button */
     modal.style = "display: none";
     restartButton.style = "display: none";
+
+    /* Clear player selections */
+    playerAttack = null;
+    cpuAttack = null;
 
     /* Enable all controls */
     attackButtons.forEach(function (button) {
