@@ -4,7 +4,7 @@ Hallo 👋, hier is mijn repo voor alle opdrachten die ik tijdens deze opleiding
 ## Opdrachten
 Hier zijn alle opdrachten die ik tot nu toe gemaakt heb op volgorde.
 <ul>
-    <li>Opdracht Programmeerbasis</li>
+    <li><a href="https://github.com/GJSBRT/deltion/tree/main/Programeerbasis">Opdracht Programmeerbasis - Quiz</a></li>
     <li><a href="https://gijs.eu/deltion/Webpagina">Opdracht Webpagina - CV</a></li>
     <li><a href="https://gijs.eu/deltion/Webpagina">Opdracht HTML/CSS - Alle</a></li>
     <li><a href="https://gijs.eu/deltion/Webpagina/taak67">Opdracht HTML/CSS - Taak 6 en 7</a></li>
