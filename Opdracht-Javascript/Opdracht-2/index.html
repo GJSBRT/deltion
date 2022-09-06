@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Opdracht 2</title>
+    <!-- Bulma CSS, want ik ga geen CSS doen en het moet mn ogen niet verbranden -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="icon" type="image/x-icon" href="https://gijs.eu/favicon.ico">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Opdracht 2 - Online toets
+            </h1>
+            <p class="subtitle">
+                Een online toets maken met Javascript
+            </p>
+
+            <div id="questions">
+
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="checkbox">
+                        <input id="iDidNotCheatBox" onclick="toggleAnswerButton()" type="checkbox">
+                        Ik heb niet de antwoorden opgezocht in de javascript source, omdat die niet server-side zijn opgeslagen.
+                    </label>
+                </div>
+            </div>
+
+            <div class="control">
+                <button id="checkAnswerButton" onclick="checkAnswers()" class="button is-link" disabled>Verstuur!</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

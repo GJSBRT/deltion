@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <title>Simple Memory</title>
+    <link rel="icon" type="image/x-icon" href="https://gijs.eu/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #memoryContainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin: auto;
+            padding: 1rem;
+            background-color: #666;
+            border-radius: 3px;
+        }
+
+        #responseText {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .memoryCard {
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: #0099FF;
+            border-radius: 3px;
+            margin: 10px;
+            border: none;
+            font-size: 25px;
+            font-weight: bold;
+            float: left;
+        }
+    </style>
+    <script>
+        var amountOfCards = 16;
+        var currentCard = null;
+        var responseText = null
+        var audio = null;
+
+        /* Adds a card to the game */
+        function addCard(i) {
+            var memoryCard = document.createElement("button");
+            memoryCard.setAttribute("class", "memoryCard");
+            memoryCard.setAttribute("id", "card" + i);
+            memoryCard.setAttribute("onclick", `flipCard('${i}')`);
+            memoryCard.setAttribute("number", i);
+            memoryCard.innerHTML = "?";
+            memoryContainer.appendChild(memoryCard);
+        }
+
+        /* Creates the amount of cards which is defined */
+        function createCards() {
+            var memoryContainer = document.getElementById("memoryContainer");
+            for (var i = 0; i < amountOfCards / 2; i++) {
+                addCard(`${i}a`);
+                addCard(`${i}b`);
+            }
+        }
+
+        /* "Flips" a card */
+        function flipCard(card) {
+            var card = document.getElementById("card" + card);
+            audio.play();
+
+            /* Check this is the first selected card */
+            if (currentCard == null) {
+                currentCard = card;
+                card.style.backgroundColor = "#fff";
+                card.style.color = "#000000";
+                card.innerHTML = currentCard.getAttribute("number").replace(/\D/g, '');;
+            } else {
+                /* Check if the cards are a match */
+                if (currentCard.getAttribute("number").replace(/\D/g, '') == card.getAttribute("number").replace(/\D/g, '')) {
+                    /* Changes the cards color */
+                    card.style.backgroundColor = "#fff";
+                    card.style.color = "#000000";
+                    card.innerHTML = card.getAttribute("number").replace(/\D/g, '');
+
+                    /* Clears the currently selected card */
+                    currentCard = null;
+
+                    /* Notifies the player of a match */
+                    responseText.innerHTML = "Goedzo!";
+                    responseText.style.color = "green";
+                } else {
+                    /* Changes the color of the card back */
+                    card.style.backgroundColor = "#0099FF";
+                    card.style.color = "#ffffff";
+                    card.innerHTML = "?";
+                    currentCard.style.backgroundColor = "#0099FF";
+                    currentCard.style.color = "#ffffff";
+                    currentCard.innerHTML = "?";
+
+                    /* Clears the currently selected card */
+                    currentCard = null;
+
+                    /* Notifies the player of a miss-matched cards */
+                    responseText.innerHTML = "Helaas!";
+                    responseText.style.color = "red";
+                }
+            }
+        }
+
+        /* Shuffles all the cards */
+        function shuffleCards() {
+            var memoryContainer = document.getElementById("memoryContainer");
+            for (var i = memoryContainer.children.length; i >= 0; i--) {
+                memoryContainer.appendChild(memoryContainer.children[Math.random() * i | 0]);
+            }
+        }
+
+        /* Start the game! */
+        function startGame() {
+            createCards();
+            shuffleCards();
+            responseText = document.getElementById("responseText");
+            audio = document.getElementById("audio"); 
+        }
+
+        /* Start the game when the page has finished loading. Otherwise some elements maybe missing */
+        window.onload = startGame;
+    </script>
+</head>
+
+<body>
+    <div id="memoryContainer">
+    </div>
+    <h1 id="responseText">Begin door op een kaart te klikken!</h1>
+    <audio id="audio">
+        <source src="click.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+
+</html>

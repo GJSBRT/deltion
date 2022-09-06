@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Opdracht 4</title>
+    <!-- Bulma CSS, want ik ga geen CSS doen en het moet mn ogen niet verbranden -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Oke, misschien een beetje CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="https://gijs.eu/favicon.ico">
+</head>
+
+<body>
+    <button id="restartButton" onclick="restart()" class="button is-danger">Click me to restart</button>
+
+    <section class="section">
+        <div class="container" style="height: 90vh">
+            <h1 class="title">Opdracht 4 - Boter, kaas en eieren</h1>
+            <p class="subtitle">Online boter, kaas en eieren tegen de computer.</p>
+
+            <div class="columns">
+                <!-- Player side -->
+                <div class="column is-two-fifths">
+                    <h1 class="title">Jij</h1>
+                </div>
+
+                <!-- Middle of screen -->
+                <div class="column">
+                    <h1 class="title has-text-centered">VS</h1>
+                </div>
+
+                <!-- CPU side -->
+                <div class="column is-two-fifths">
+                    <h1 class="title has-text-right">Computer</h1>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="columns" style="height: 80%;">
+                <!-- Player side -->
+                <div class="column is-two-fifths is-flex is-flex-direction-column">
+                    <div id="attackButtons" class="field is-grouped">
+                        <!-- Attack buttons -->
+                    </div>
+                    <i id="playerIcon" class="fa-solid fa-spinner has-text-centered my-auto custom-spin custom-hand-icon"></i>
+                </div>
+
+                <!-- Middle of screen -->
+                <div class="column">
+                    <hr class="custom-vertical-hr" />
+                </div>
+
+                <!-- CPU side -->
+                <div class="column is-two-fifths is-flex is-flex-direction-column">
+                    <i id="cpuIcon" class="fa-solid fa-check has-text-centered my-auto custom-hand-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result modal -->
+    <div id="modal" class="modal" style="display: hidden;">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p id="modal-header" class="modal-card-title"></p>
+                <button onclick="closeModal()" class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                Click the button below to play again!
+            </section>
+            <footer class="modal-card-foot">
+                <button onclick="restart()" class="button is-success">Play again?</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/abc0b9cc1a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

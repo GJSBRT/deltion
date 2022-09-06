@@ -1,0 +1,87 @@
+.custom-vertical-hr {
+    height: 100%;
+    margin-left: 49.25%;
+    margin-right: 49.25%;
+}
+
+.custom-hand-icon {
+    font-size: 15rem;
+    opacity: 0.4;
+    width: 100%;
+}
+
+.modal-card {
+    top: 30%;
+}
+
+#restartButton {
+    display: none;
+    position: absolute;
+    top: 1%;
+    left: 46%;
+}
+
+/* Animaties */
+.custom-spin {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.custom-start-fight-player {
+    position: relative;
+    animation-name: start-fight-player;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+@keyframes start-fight-player {
+    from {
+        right: 50px;
+        bottom: 100px;
+        transform: rotate3d(0, 0, 1, -45deg);
+    }
+
+    to {
+        right: 0px;
+        bottom: 0px;
+        transform: rotate3d(0,0,0,0);
+    }
+}
+
+.custom-start-fight-cpu {
+    position: relative;
+    animation-name: start-fight-cpu;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    transform: scaleX(-1);
+}
+
+@keyframes start-fight-cpu {
+    from {
+        left: 50px;
+        bottom: 100px;
+        transform: scaleX(-1) rotate3d(0, 0, -1, 45deg);
+    }
+
+    to {
+        left: 0px;
+        bottom: 0px;
+        transform: scaleX(-1) rotate3d(0, 0, -1, 0deg);
+    }
+}
