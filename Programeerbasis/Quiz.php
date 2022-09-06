@@ -18,7 +18,7 @@ if ($input == "stop") {
     } else {
         // Vertel de speler of het getal hoger of lager is
         if ($input > $randomNumber) {
-            print "Het getal is kleiner dan $input 🔻\n";
+            print "Het getal is kleiner dan $input 🔻\n";   
         } else {
             print "Het getal is groter dan $input 🔺\n";
         }
